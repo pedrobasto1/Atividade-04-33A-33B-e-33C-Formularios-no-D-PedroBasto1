@@ -25,5 +25,4 @@ urlpatterns = [
     path('kennedy',views.create_kennedy),
     path('kennedy/update/<id1>', views.update_kennedy),
     path('kennedy/delete/<id1>', views.delete_kennedy),
-    path('admin/', admin.site.urls),
 ]
