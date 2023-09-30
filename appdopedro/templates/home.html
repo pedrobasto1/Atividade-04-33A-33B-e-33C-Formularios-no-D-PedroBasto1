@@ -14,6 +14,10 @@
 </head>
 
 <body style="background-color:slategray">
+  {% if request.user.is_authenticated %}
+    <b> Bem vindo, {{request.user.username}}</b> <br>
+    <a href="/users/logout"> Sair</a>
+  {% endif %}
   <div class="blue-center">
   <h1><b style="color: darkblue">Melhores lugares da PUC</b></h1>
   </div>

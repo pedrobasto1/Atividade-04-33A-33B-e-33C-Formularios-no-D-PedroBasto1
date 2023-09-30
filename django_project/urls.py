@@ -18,6 +18,9 @@ from django.urls import path
 from appdopedro import views
 
 urlpatterns = [
+    path('users/login/', views.login_user, name="login"),
+    path('users/logout/', views.logout_user, name="logout"),
+    path('users', views.create_user),
     path('',views.home, name="home"),
     path('lugares',views.create_lugar),
     path('lugares/update/<id>', views.update_lugar),
@@ -25,4 +28,5 @@ urlpatterns = [
     path('kennedy',views.create_kennedy),
     path('kennedy/update/<id1>', views.update_kennedy),
     path('kennedy/delete/<id1>', views.delete_kennedy),
+    path('admin/', admin.site.urls),
 ]
