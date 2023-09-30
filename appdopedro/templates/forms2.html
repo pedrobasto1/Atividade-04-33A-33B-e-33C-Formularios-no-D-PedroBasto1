@@ -1,0 +1,26 @@
+<h1>{{ action }} motivos para a biblioteca do Kennedy ser pior </h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título:</label>
+    <input name="titulo" value={{kennedy.titulo}}>
+  </div>
+
+  <div>
+    <label>Nível Ruim:</label>
+    <input type="number" name="nivel_ruim" value={{kennedy.nivel_ruim}}>
+  </div>
+
+  <div>
+    <label>Regularidade:</label>
+    <input name="regularidade" value={{kennedy.regularidade}}>
+  </div>
+
+  <div>
+    <label>Insatisfação:</label>
+    <input name="insatisfacao" value={{kennedy.insatisfacao}}>
+  </div>
+
+  <input type="submit" value="Registrar"
+</form>

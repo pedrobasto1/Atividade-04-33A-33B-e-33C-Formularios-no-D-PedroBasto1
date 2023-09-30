@@ -1,0 +1,26 @@
+<h1>{{ action }} lugares da PUC</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título:</label>
+    <input name="titulo" value={{lugar.titulo}}>
+  </div>
+
+  <div>
+    <label>Nota:</label>
+    <input type="number" name="nota_geral" value={{lugar.nota_geral}}>
+  </div>
+
+  <div>
+    <label>Problemas:</label>
+    <input name="problemas" value={{lugar.problemas}}>
+  </div>
+
+  <div>
+    <label>Frequência em que vai:</label>
+    <input name="frequencia" value={{lugar.frequencia}}>
+  </div>
+
+  <input type="submit" value="Registrar"
+</form>

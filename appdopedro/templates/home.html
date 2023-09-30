@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pedro Basto Szklo</title>
+  <link rel="stylesheet" href="{%static 'appdopedro/css/style.css' %}">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://atividade-01-apresentacao-pessoal-em-htmlcss-pedrobasto1.eng4021-20232.repl.co/" target="_blank"/>
+  
+  
+</head>
+
+<body style="background-color:slategray">
+  <div class="blue-center">
+  <h1><b style="color: darkblue">Melhores lugares da PUC</b></h1>
+  </div>
+  <div class="blue-center">
+  <h3><i style="color: darkslateblue">Por Pedro Basto</i></h3>
+  </div>
+  <div class="blue-center">
+  <p>Este site tem o intuito de informar aos estudantes da própria universidade os melhores locais que encontram-se no campus, levando em conta alguns critérios, como <u>estudar, comer, lazer e até mesmo dormir</u>. Acompanhe abaixo as localidades. 😀😀😀</p>
+      </div>
+      <!--<ol>
+      <li>Ginásio</li>
+      <li>Biblioteca do CTC</li>
+      <li>Barraquinha da tia</li>
+      <li>Final do pilotis do leme</li>
+      <li>Labgrad</li> -->
+  <ol>
+    {% for lugar in Lugares %}
+      <li>{{ lugar.titulo }} <a href="/lugares/update/{{lugar.id}}"> Atualizar</a>
+      <a href="/lugares/delete/{{lugar.id}}"> Remover</a></li>
+    {% endfor %}
+  </ol>
+  <a href="/lugares">Adicionar novo Lugar</a>
+  </div>
+  <div class="blue-center">
+  <h3 href="">Ginásio</h3>
+  </div>
+  <div class="blue-center">
+  <p>Bom, o <a href="http://nucleodememoria.vrac.puc-rio.br/localizacao/antigo-ginasio-esportivo" target="_blank">ginásio da universidade desde os primórdios da PUC</a>, além de evidentemente funcionar para a prática de esportes das equipes competitivas, também é um espaço bem grande, o que ajuda os estudantes que estão com uma grade horária esburacada no grande problema que é o soninho pós almoço.</p>
+  </div>
+  <div>
+    <div class="blue-center">
+  <img src="https://fwengenharia.com.br/cac/wp-content/uploads/2016/05/foto1-262.jpg" width="300"
+    </div>
+    </div>
+  <div class="blue-center">
+  <h3>Biblioteca do CTC</h3>
+  </div>
+  <div class="blue-center">
+  <p>Quando pensamos em um local perfeito para o estudo coletivo 15 minutos antes da prova, pensamos na biblioteca do CTC. Mas alguns podem se perguntar: "Por que não a do <a href="http://nucleodememoria.vrac.puc-rio.br/localizacao/pilotis-da-ala-kennedy" target="_blank"> prédio Kennedy</a>?". Bom, a resposta é bem simples:</p>
+    </div>
+  <div class="blue-center">
+    <!-- <ul>
+      <li>Tem mais gente</li>
+      <li>Precisa reservar sala</li>
+      <li>Estudantes de Direito pedem para você ficar em silêncio</li>
+    </ul> -->
+    <ul>
+    {% for problema in NaoKennedy %}
+      <li>{{ problema.titulo }} <a href="/kennedy/update/{{kennedy.id1}}"> Atualizar</a>
+      <a href="/kennedy/delete/{{kennedy.id1}}"> Remover</a></li>
+    {% endfor %}
+    </ul>
+    <a href="/kennedy">Adicionar novo Problema</a>
+  </div>
+  <div>
+    <div class="blue-center">
+  <img src="https://bibliopucrio.files.wordpress.com/2018/04/img-20180323-wa00061.jpg?w=631&h=473" width="300"
+    </div>
+    </div>
+  <div class="blue-center">
+  <h3>Barraquinha da tia</h3>
+  </div>
+  <div class="blue-center">
+  <p>Agora temos o melhor lugar para acabar com aquela fome entre aulas, que é a barraca de pão de queijo da tia localizada <a href="https://www.youtube.com/watch?app=desktop&v=uWqsog05C_Q&ab_channel=FORADACAIXA" target="_blank">na parte de fora do campus</a>, mas que para muitos encontra-se dentro de seus corações❤️. Além de feito com amor, a tia oferece o combo de 12 pães de queijo + guaravita por apenas 10 reais. Obs: Imagem não condizente com a verdadeira tia.</p>
+  </div>
+  <div>
+    <div class="blue-center">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgekNHeSlynvPodpaFRI33WJ8aqf1O4Dg-7TNnLb_YgLQMU4O-mxFVopEpYYCkWJNlltTc39T4iCdtuqTJlfSXCyzgVZMFTc1W_xoJd1iyfjh919weykiXCWBXFvtGqQUh6xrMED1umC-B3lIRFcVff9l2kPlgcI3hu6ZrwMM0qICH6sdKhYUpQ1SA_dw/s1100/Mercearia%20emporio%20(4).jpg" width="200" 
+    </div>
+  </div>
+  <div class="blue-center">
+  <h3>Final do pilotis do Leme</h3>
+  </div>
+  <div class="blue-center">
+  <p>Falando um pouco de um dos melhores locais para descontrair e jogar aquele truquinho com seus amigos temos as mesas dos restaurantes no final do pilotis, que funcionam bem até chegar a hora do almoço, na qual somos expulsos.</p>
+  </div>
+  <div>
+    <div class="blue-center">
+  <img src="https://network.grupoabril.com.br/wp-content/uploads/sites/4/2016/10/engenharia-e-produccca7acc83o-priv.jpg?quality=70&strip=all" width="300"
+    </div>
+    </div>
+  <div class="blue-center">
+  <h3>LabGrad</h3>
+  </div>
+  <div class="blue-center">
+  <p>E para fechar nosso top 5, temos o LabGrad, que é a melhor sala de informática da PUC. Lá encontramos os melhores computadores para os estudantes de engenharia e do restante do centro técnico científico estudarem com qualidade.</p>
+  </div>
+    <div>
+      <div class="blue-center">
+  <img src="https://media.licdn.com/dms/image/C4D0BAQF1YggrThfYvQ/company-logo_200_200/0/1574947472048?e=2147483647&v=beta&t=wobTnOmx7uG2jTePvOM--05H9LYEH2sTIT1UnjKXSjI" width="300"
+    </div>
+    </div>
+  <br>
+  <br>
+<div class="blue-center">
+<table style="text-align: center">
+  <thead>
+    <tr>
+      <th>Lugar</th>
+      <th>Nota Geral</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in Tabela %}
+    <tr>
+      <td>{{item.titulo}}</td>
+      <td>{{item.nota}}</td>
+    </tr>
+  {% endfor %}  
+  </tbody>
+</table>
+  </div>
+  <br>
+  <br>
+</body>
+
+</html>
